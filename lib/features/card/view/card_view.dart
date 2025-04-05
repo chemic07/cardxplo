@@ -1,5 +1,5 @@
-import 'package:cardx/models/card_model.dart';
-import 'package:cardx/theme/theme.dart';
+import 'package:cardxplo/models/card_model.dart';
+import 'package:cardxplo/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

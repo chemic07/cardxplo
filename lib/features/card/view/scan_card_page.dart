@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:cardx/common/rounded_button.dart';
-import 'package:cardx/constants/gemini_constants.dart';
-import 'package:cardx/theme/theme.dart';
+import 'package:cardxplo/common/rounded_button.dart';
+import 'package:cardxplo/constants/gemini_constants.dart';
+import 'package:cardxplo/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:http/http.dart' as http;

@@ -1,10 +1,10 @@
-import 'package:cardx/common/loading_page.dart';
-import 'package:cardx/constants/constants.dart';
-import 'package:cardx/features/auth/controller/auth_controller.dart';
-import 'package:cardx/features/auth/pages/login_page.dart';
-import 'package:cardx/features/auth/widgets/auth_button.dart';
-import 'package:cardx/features/auth/widgets/auth_field.dart';
-import 'package:cardx/theme/app_palette.dart';
+import 'package:cardxplo/common/loading_page.dart';
+import 'package:cardxplo/constants/constants.dart';
+import 'package:cardxplo/features/auth/controller/auth_controller.dart';
+import 'package:cardxplo/features/auth/pages/login_page.dart';
+import 'package:cardxplo/features/auth/widgets/auth_button.dart';
+import 'package:cardxplo/features/auth/widgets/auth_field.dart';
+import 'package:cardxplo/theme/app_palette.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

@@ -1,9 +1,9 @@
 import 'dart:io';
-import 'package:cardx/common/loading_page.dart';
-import 'package:cardx/common/rounded_button.dart';
-import 'package:cardx/core/utils.dart';
-import 'package:cardx/features/card/controller/card_controller.dart';
-import 'package:cardx/features/card/widgets/text_field_custom.dart';
+import 'package:cardxplo/common/loading_page.dart';
+import 'package:cardxplo/common/rounded_button.dart';
+import 'package:cardxplo/core/utils.dart';
+import 'package:cardxplo/features/card/controller/card_controller.dart';
+import 'package:cardxplo/features/card/widgets/text_field_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,4 +1,4 @@
-import 'package:cardx/core/failure.dart';
+import 'package:cardxplo/core/failure.dart';
 import 'package:fpdart/fpdart.dart';
 
 typedef FutureEither<T> = Future<Either<Failure, T>>; //custom type

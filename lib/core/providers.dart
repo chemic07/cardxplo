@@ -1,5 +1,5 @@
 import 'package:appwrite/appwrite.dart';
-import 'package:cardx/constants/constants.dart';
+import 'package:cardxplo/constants/constants.dart';
 import 'package:riverpod/riverpod.dart';
 
 final appwriteClinetProvider = Provider((ref) {

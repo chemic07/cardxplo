@@ -1,12 +1,12 @@
 import 'dart:io';
 
-import 'package:cardx/constants/assets_constants.dart';
-import 'package:cardx/constants/ui_constants.dart';
-import 'package:cardx/core/core.dart';
-import 'package:cardx/features/card/view/scan_card_page.dart';
-import 'package:cardx/features/home/widgets/bottom_nav_clipper.dart';
-import 'package:cardx/features/home/widgets/buttom_nav_bar_item.dart';
-import 'package:cardx/theme/app_palette.dart';
+import 'package:cardxplo/constants/assets_constants.dart';
+import 'package:cardxplo/constants/ui_constants.dart';
+import 'package:cardxplo/core/core.dart';
+import 'package:cardxplo/features/card/view/scan_card_page.dart';
+import 'package:cardxplo/features/home/widgets/bottom_nav_clipper.dart';
+import 'package:cardxplo/features/home/widgets/buttom_nav_bar_item.dart';
+import 'package:cardxplo/theme/app_palette.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

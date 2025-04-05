@@ -1,5 +1,5 @@
 // import 'package:cardx/features/auth/controller/auth_controller.dart';
-import 'package:cardx/features/user_profile/controller/user_profile_controller.dart';
+import 'package:cardxplo/features/user_profile/controller/user_profile_controller.dart';
 // import 'package:cardx/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

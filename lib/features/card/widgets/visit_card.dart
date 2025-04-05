@@ -1,10 +1,10 @@
-import 'package:cardx/constants/assets_constants.dart';
-import 'package:cardx/core/utils.dart';
-import 'package:cardx/features/card/controller/card_controller.dart';
-import 'package:cardx/features/card/view/card_view.dart';
-import 'package:cardx/theme/app_palette.dart';
+import 'package:cardxplo/constants/assets_constants.dart';
+import 'package:cardxplo/core/utils.dart';
+import 'package:cardxplo/features/card/controller/card_controller.dart';
+import 'package:cardxplo/features/card/view/card_view.dart';
+import 'package:cardxplo/theme/app_palette.dart';
 import 'package:flutter/material.dart';
-import 'package:cardx/models/card_model.dart';
+import 'package:cardxplo/models/card_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:like_button/like_button.dart';

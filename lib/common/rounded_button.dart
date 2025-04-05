@@ -1,13 +1,15 @@
 import 'package:cardxplo/theme/app_palette.dart';
 import 'package:flutter/material.dart';
 
-class AuthButton extends StatelessWidget {
+class RoundedButton extends StatelessWidget {
   final VoidCallback onTap;
   final String buttonText;
-  const AuthButton({
+  final Color bgColor;
+  const RoundedButton({
     super.key,
     required this.buttonText,
     required this.onTap,
+    this.bgColor = AppPalette.buttonBlue,
   });
 
   @override
@@ -17,8 +19,11 @@ class AuthButton extends StatelessWidget {
         onPressed: onTap,
 
         style: ElevatedButton.styleFrom(
-          fixedSize: Size(325, 60),
-          backgroundColor: AppPalette.buttonBlue,
+          fixedSize: Size(300, 60),
+          backgroundColor: bgColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
         ),
         child: Text(
           buttonText,

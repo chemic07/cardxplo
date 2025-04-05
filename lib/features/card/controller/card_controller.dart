@@ -1,13 +1,13 @@
 import 'dart:io';
-import 'package:cardx/apis/card_api.dart';
-import 'package:cardx/apis/storage_api.dart';
-import 'package:cardx/apis/user_api.dart';
-import 'package:cardx/core/core.dart';
-import 'package:cardx/features/auth/controller/auth_controller.dart';
-import 'package:cardx/features/home/view/home_page.dart';
+import 'package:cardxplo/apis/card_api.dart';
+import 'package:cardxplo/apis/storage_api.dart';
+import 'package:cardxplo/apis/user_api.dart';
+import 'package:cardxplo/core/core.dart';
+import 'package:cardxplo/features/auth/controller/auth_controller.dart';
+import 'package:cardxplo/features/home/view/home_page.dart';
 
-import 'package:cardx/models/card_model.dart';
-import 'package:cardx/models/user_model.dart';
+import 'package:cardxplo/models/card_model.dart';
+import 'package:cardxplo/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

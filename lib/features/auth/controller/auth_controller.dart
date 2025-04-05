@@ -1,10 +1,10 @@
 import 'package:appwrite/models.dart';
-import 'package:cardx/apis/auth_api.dart';
-import 'package:cardx/apis/user_api.dart';
-import 'package:cardx/core/core.dart';
-import 'package:cardx/features/auth/pages/login_page.dart';
-import 'package:cardx/features/home/view/home_page.dart';
-import 'package:cardx/models/user_model.dart';
+import 'package:cardxplo/apis/auth_api.dart';
+import 'package:cardxplo/apis/user_api.dart';
+import 'package:cardxplo/core/core.dart';
+import 'package:cardxplo/features/auth/pages/login_page.dart';
+import 'package:cardxplo/features/home/view/home_page.dart';
+import 'package:cardxplo/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

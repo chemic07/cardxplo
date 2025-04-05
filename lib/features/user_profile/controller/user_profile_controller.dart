@@ -1,7 +1,7 @@
-import 'package:cardx/apis/card_api.dart';
-import 'package:cardx/apis/user_api.dart';
-import 'package:cardx/features/auth/controller/auth_controller.dart';
-import 'package:cardx/models/user_model.dart';
+import 'package:cardxplo/apis/card_api.dart';
+import 'package:cardxplo/apis/user_api.dart';
+import 'package:cardxplo/features/auth/controller/auth_controller.dart';
+import 'package:cardxplo/models/user_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final userProfileControllerprovider =

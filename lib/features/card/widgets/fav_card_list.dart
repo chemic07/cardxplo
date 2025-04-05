@@ -1,10 +1,10 @@
-import 'package:cardx/common/error_page.dart';
-import 'package:cardx/common/loading_page.dart';
-import 'package:cardx/constants/appwrite_constants.dart';
-import 'package:cardx/features/auth/controller/auth_controller.dart';
-import 'package:cardx/features/card/controller/card_controller.dart';
-import 'package:cardx/features/card/widgets/visit_card.dart';
-import 'package:cardx/models/card_model.dart';
+import 'package:cardxplo/common/error_page.dart';
+import 'package:cardxplo/common/loading_page.dart';
+import 'package:cardxplo/constants/appwrite_constants.dart';
+import 'package:cardxplo/features/auth/controller/auth_controller.dart';
+import 'package:cardxplo/features/card/controller/card_controller.dart';
+import 'package:cardxplo/features/card/widgets/visit_card.dart';
+import 'package:cardxplo/models/card_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
