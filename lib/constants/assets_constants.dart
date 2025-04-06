@@ -1,5 +1,6 @@
 class AssetsConstants {
   static const String _svgsPath = 'assets/svgs';
+  static const String _pngspath = 'assets/icon';
   static const cardxLogo = "$_svgsPath/cardx_logo.svg";
   static const homeFilledIcon = "$_svgsPath/home_filled.svg";
   static const homeOutlinedIcon = "$_svgsPath/home_outlined.svg";
@@ -14,4 +15,5 @@ class AssetsConstants {
   static const jobPositionIcon = "$_svgsPath/job_position_icon.svg";
   static const companyIcon = "$_svgsPath/company_icon.svg";
   static const clockIcon = "$_svgsPath/clock_icon.svg";
+  static const addCardIcon = "$_pngspath/add_card_icon.png";
 }

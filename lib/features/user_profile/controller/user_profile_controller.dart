@@ -1,7 +1,12 @@
+import 'dart:io';
+
 import 'package:cardxplo/apis/card_api.dart';
+import 'package:cardxplo/apis/storage_api.dart';
 import 'package:cardxplo/apis/user_api.dart';
+import 'package:cardxplo/core/core.dart';
 import 'package:cardxplo/features/auth/controller/auth_controller.dart';
 import 'package:cardxplo/models/user_model.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final userProfileControllerprovider =
@@ -9,6 +14,7 @@ final userProfileControllerprovider =
       return UserProfileController(
         userApi: ref.watch(userAPIProvider),
         cardApi: ref.watch(cardAPIProvider),
+        storageApi: ref.watch(storageApiProvider),
       );
     });
 
@@ -33,15 +39,42 @@ final getUserDataProvider = FutureProvider((ref) async {
 class UserProfileController extends StateNotifier<bool> {
   final UserApi _userApi;
   final CardApi _cardApi;
+  final StorageApi _storageApi;
+
   UserProfileController({
     required UserApi userApi,
     required CardApi cardApi,
+    required StorageApi storageApi,
+    Ref? ref,
   }) : _userApi = userApi,
        _cardApi = cardApi,
+       _storageApi = storageApi,
+
        super(false);
 
   Future<UserModel> getuserData(String uid) async {
     final userData = await _userApi.getUserData(uid);
     return UserModel.fromMap(userData.data);
+  }
+
+  void updateUserProfile({
+    required UserModel userModel,
+    required BuildContext context,
+    required File? profilePic,
+  }) async {
+    state = true;
+
+    if (profilePic != null) {
+      //uploading the image
+      final profilePicUrl = await _storageApi.uploadImage(profilePic);
+      //replacing the image
+      userModel = userModel.copyWith(profilePic: profilePicUrl);
+    }
+    final res = await _userApi.updateUserData(userModel);
+    state = false;
+    res.fold(
+      (l) => showSnackBar(context, l.message),
+      (r) => print("User updated successfully"),
+    );
   }
 }

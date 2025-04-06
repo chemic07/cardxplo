@@ -1,9 +1,15 @@
+import 'package:cardxplo/constants/assets_constants.dart';
+import 'package:cardxplo/features/card/controller/card_controller.dart';
+import 'package:cardxplo/common/text_icon.dart';
 import 'package:cardxplo/models/card_model.dart';
 import 'package:cardxplo/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:like_button/like_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CardView extends StatelessWidget {
+class CardView extends ConsumerWidget {
   static route(CardModel cardModel) => MaterialPageRoute(
     builder: (context) => CardView(cardModel: cardModel),
   );
@@ -12,11 +18,35 @@ class CardView extends StatelessWidget {
   const CardView({super.key, required this.cardModel});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         title: Text(cardModel.name),
         backgroundColor: AppPalette.background,
+        actions: [
+          LikeButton(
+            isLiked: cardModel.isFavorite,
+            onTap: (isLiked) async {
+              ref
+                  .watch(cardControllerProvider.notifier)
+                  .likeCard(cardModel);
+              return !isLiked;
+            },
+            size: 25,
+            likeBuilder: (isLiked) {
+              return isLiked
+                  ? SvgPicture.asset(
+                    AssetsConstants.likeFilledIcon,
+                    color: AppPalette.likeColor,
+                  )
+                  : SvgPicture.asset(
+                    AssetsConstants.likeOutlinedIcon,
+                    color: AppPalette.iconGray,
+                  );
+            },
+          ),
+          SizedBox(width: 16),
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.all(8),
@@ -53,19 +83,26 @@ class CardView extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Center(
-                child: Text(
-                  cardModel.name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    TextIcon(
+                      text: cardModel.jobTitle,
+                      iconPath: AssetsConstants.jobPositionIcon,
+                      fontsize: 24,
+                      iconHeight: 20,
+                    ),
+
+                    TextIcon(
+                      text: cardModel.company,
+                      iconPath: AssetsConstants.companyIcon,
+                      fontsize: 20,
+                      iconHeight: 16,
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 12),
-              _infoRow('Job Title', cardModel.jobTitle),
-              const SizedBox(height: 8),
-              _infoRow('Company', cardModel.company),
+
               const SizedBox(height: 8),
               _infoRow('Phone', cardModel.phone),
               const SizedBox(height: 8),

@@ -10,7 +10,7 @@ import 'package:cardxplo/models/premium_card_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 
-final premiumCardApiProvider = FutureProvider((ref) async {
+final premiumCardApiProvider = Provider((ref) {
   final database = ref.watch(appwriteDatabaseProvider);
   return PremiumCardApi(db: database);
 });

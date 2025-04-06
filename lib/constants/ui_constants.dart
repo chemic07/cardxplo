@@ -1,6 +1,7 @@
 import 'package:cardxplo/constants/assets_constants.dart';
 import 'package:cardxplo/features/card/widgets/card_list.dart';
 import 'package:cardxplo/features/card/widgets/fav_card_list.dart';
+import 'package:cardxplo/features/user_profile/view/ar_view.dart';
 import 'package:cardxplo/features/user_profile/view/user_profile_view.dart';
 import 'package:cardxplo/theme/app_palette.dart';
 
@@ -42,7 +43,7 @@ class UiConstants {
   static List<Widget> bottomBarPages = [
     CardList(),
     FavCardList(),
-    Text("Ar view"),
+    ArView(),
     UserProfileView(),
   ];
 }

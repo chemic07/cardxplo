@@ -1,4 +1,4 @@
-import 'package:cardxplo/theme/app_palette.dart';
+import 'package:cardxplo/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
