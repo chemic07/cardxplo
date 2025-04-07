@@ -45,6 +45,6 @@ class ArView extends StatelessWidget {
     for (AppInfo a in apps) {
       print(" (app list${a.name}");
     }
-    AppInfo app = await InstalledApps.getInstalledApps(String id);
+    // AppInfo app = await InstalledApps.getInstalledApps(String id);git
   }
 }
