@@ -45,7 +45,7 @@ CardX is a next-gen digital business card manager built with **Flutter**, **Mach
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/cardx.git
+git clone https://github.com/chemic07/cardxplo
 cd cardx
 
 # Get packages
@@ -60,15 +60,16 @@ class AppwriteConstants {
   static const String projectId = 'your_appwrite_project_id';
   static const String endPoint = 'https://your-appwrite-endpoint.com';
   static const String databaseId = 'your_database_id';
+  static const String documentId = 'your_documentId_id';
+  static const String documentId = 'your_documentId_id';
   static const String usersCollectionId = 'your_users_collection_id';
   static const String cardCollectionId = 'your_card_collection_id';
+  static const String premiumcardsCollection = 'your_premium_cards_collection_id';
 }
-
 
 lib/constants/gemini_constants.dart
 class GeminiConstants {
-  static const String apiKey = 'your_gemini_api_key';
-  static const String model = 'gemini-pro'; // or other model name
+  static const String apiKey = 'your_gemini_api_key'
 }
 
 # Run the app
